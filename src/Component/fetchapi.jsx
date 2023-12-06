@@ -39,13 +39,8 @@ const ApiDataComponent = (props) => {
   }
 
 
-  return (loading ? <p>Loading...</p> :
-    <div>
-      <h1>Data from API</h1>
-        {data.map((item) => (
-          <div key={item.id}>{item.name}</div>
-        ))}
-    </div>
+  return (
+    <></>
   );
 };
 

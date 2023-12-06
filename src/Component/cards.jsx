@@ -1,21 +1,30 @@
 import React, { useState } from 'react';
-import "./styles.css";
+import './styles.css';
 import ApiDataComponent from './fetchapi.jsx';
 
 function CardsList() {
-    let cardItems = [];
+    const [cardItems, setCardItems] = useState([]);
     function getData(fetched) {
-      cardItems = fetched;
-    }   
+        setCardItems(fetched);
+    }
 
     return (
         <div className="main">
+            <ApiDataComponent getData={getData} />
             <div className='arrayOfObj'>
-                {cardItems.map((item) => (
-                    <ApiDataComponent key={item.id} data={item} function = {getData} />
-                ))}
+                {console.log("Before", cardItems)}
+                <div>
+                    <h1>Data from API</h1>
+                    {cardItems.map((item) => (
+                        <div className='card' key={item.id}>
+                        <div className='name' >{item.name}</div>
+                        <div className='price' >{item.price}</div>  
+                       <div className='address' >{item.address}</div>
+                        <button className='button'>Read More</button>
+                        </div>
+                    ))}
+                </div>
             </div>
-            <ApiDataComponent/>
         </div>
     );
 }

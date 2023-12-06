@@ -1,59 +1,73 @@
 .main {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to left top, blue, red); /* Set your desired background color */
-}
-
-.arrayOfObj {
+    background: linear-gradient(to left top, #0099ff, #ff1900);
+  }
+  
+  .arrayOfObj {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-}
-
-.card {
+  }
+  
+  .card {
     width: 250px;
-    background-color: #fff;
+    background-color: rgb(26, 161, 154);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
-    height: 250px;
-
+    height: 300px;
+    margin-bottom: 20px;
+    margin-right: 20px; /* Add margin between each card */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
     &:hover {
-        transform: scale(1.15);
+      transform: scale(1.05);
     }
-
-    .img {
-        width: 100%;
-        height: auto;
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
+  
+    .name {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 8px;
     }
-
-    div {
-        padding: 15px;
-
-        .name, .review {
-            margin: 0;
-            font-size: 16px;
-            color: #333;
+  
+    .price {
+      font-size: 18px;
+      color: #000000;
+      margin-bottom: 8px;
+    }
+  
+    .address {
+      font-size: 14px;
+      color: #000000;
+      margin-bottom: 16px;
+    }
+  
+    .content {
+      padding: 15px;
+  
+      .button {
+        background-color: #3498db;
+        color: rgb(0, 0, 0);
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease-in-out;
+  
+        &:hover {
+          background-color: #2980b9;
         }
-
-        .button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            margin-top: 10px;
-            font-size: 14px;
-
-            &:hover {
-                background-color: #45a049;
-            }
-        }
+      }
     }
-}
+  }
+  
