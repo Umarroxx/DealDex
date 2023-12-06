@@ -1,0 +1,59 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to left top, blue, red); /* Set your desired background color */
+}
+
+.arrayOfObj {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    height: 250px;
+
+    &:hover {
+        transform: scale(1.15);
+    }
+
+    .img {
+        width: 100%;
+        height: auto;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    div {
+        padding: 15px;
+
+        .name, .review {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 14px;
+
+            &:hover {
+                background-color: #45a049;
+            }
+        }
+    }
+}
