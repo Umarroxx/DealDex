@@ -37,8 +37,7 @@ const ApiDataComponent = (props) => {
   if (error) {
     return <p>Error: {error.message}</p>;
   }
-
-
+  
   return (
     <></>
   );
