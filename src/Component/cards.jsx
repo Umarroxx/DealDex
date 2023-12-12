@@ -13,7 +13,6 @@ function CardsList() {
             <ApiDataComponent getData={getData} />
             <div className='arrayOfObj'>
                 {console.log("Before", cardItems)}
-                <div>
                     <h1>Data from API</h1>
                     {cardItems.map((item) => (
                         <div className='card' key={item.id}>
@@ -23,7 +22,6 @@ function CardsList() {
                         <button className='button'>Read More</button>
                         </div>
                     ))}
-                </div>
             </div>
         </div>
     );
