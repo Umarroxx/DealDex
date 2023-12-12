@@ -8,7 +8,7 @@ const ApiDataComponent = (props) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://192.168.1.13:8080/products');
+        const response = await fetch('http://localhost:8080/products');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -37,7 +37,7 @@ const ApiDataComponent = (props) => {
   if (error) {
     return <p>Error: {error.message}</p>;
   }
-  
+
   return (
     <></>
   );
