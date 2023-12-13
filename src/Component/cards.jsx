@@ -13,15 +13,14 @@ function CardsList() {
             <ApiDataComponent getData={getData} />
             <div className='arrayOfObj'>
                 {console.log("Before", cardItems)}
-                    <h1>Data from API</h1>
-                    {cardItems.map((item) => (
-                        <div className='card' key={item.id}>
+                {cardItems.map((item) => (
+                    <div className='card' key={item.id}>
                         <div className='name' >{item.name}</div>
-                        <div className='price' >{item.price}</div>  
-                       <div className='address' >{item.address}</div>
+                        <div className='price' >{item.price}</div>
+                        <div className='address' >{item.address}</div>
                         <button className='button'>Read More</button>
-                        </div>
-                    ))}
+                    </div>
+                ))}
             </div>
         </div>
     );
